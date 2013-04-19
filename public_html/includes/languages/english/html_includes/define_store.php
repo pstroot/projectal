@@ -1,0 +1,1 @@
+This is the header text for the STORE page

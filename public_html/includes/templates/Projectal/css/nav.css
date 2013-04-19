@@ -1,0 +1,151 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body { } 
+
+#topNav,
+#utility-links,
+header h1.headerBar,
+#bigButtons{top:20px;}
+
+.header-after{height:191px;} /* 171 + top position from above */
+
+#topNav{ /* Main Navigation */
+	position:absolute;
+	z-index:10;
+	display:block;
+	z-index:12;
+	background-color:#272525;
+	height:42px;
+	white-space: nowrap;
+}
+#topNav li#freeShippingMessage{
+	width:110px;
+	background-color:inherit;
+	background-image: url(../images/Projectal_Shipping_Message.png);
+	overflow:hidden;
+	text-indent:-999px;
+	margin-top:-4px;
+	margin-left:3px;
+	display:none;
+}
+/* List of pages that the Free shipping message should appear on */
+#indexHomeBody #topNav li#freeShippingMessage,
+#indexBody #topNav li#freeShippingMessage,
+#productinfoBody #topNav li#freeShippingMessage,
+#storeBody #topNav li#freeShippingMessage{ display:inline; }
+
+
+#topNav ul{ /* Main Navigation */
+	height:42px;
+}
+
+#topNav li{ 
+	padding-top:13px;
+	padding-bottom:13px;	
+	float:left;
+	background-image: url(../images/top-shadow.png);	
+	background-color:#4f4f4f;
+	background-repeat: repeat-x;
+	background-position: center bottom;
+	margin-right:5px;
+	text-transform: uppercase;
+}
+#topNav .active{
+	background-color:#0b414e;
+}
+#topNav li a{ 
+	font-size:14px;	
+	padding-top:12px;
+	padding-bottom:11px;
+	padding-left:21px;
+	padding-right:21px;
+	color:#FFFFFF;
+	font-weight:bold;
+	text-decoration:none;
+}
+#topNav li:hover{ 
+	color:#eedfb8;
+	background-color:#0b414e;
+	/* CSS3 Inner Shadow */
+	-moz-box-shadow: inset 0 0 8px rgba(0,0,0, 0.8);
+	-webkit-box-shadow: inset 0 0 8px rgba(0,0,0, 0.8);
+	background-image: none;
+}
+#topNav li:hover a{ 
+	text-decoration:none;
+}
+#topNav li#info {margin-right:0px;}
+#topNav li#info a{ 
+	background-image: url(../images/left-shadow.png);
+	background-repeat: repeat-y;
+	background-position: right;
+}
+
+
+
+/* SECONDARY NAV */
+
+#topNav li .subnav{ 
+	display:none;
+	position:absolute;
+	margin-top:26px;
+	width:172px;
+}
+
+#topNav li:hover .subnav{
+	display:block; 
+}
+
+#topNav li:hover .subnav .subnav_before{
+	width:100%;
+	height:20px;
+	background-image: url(../images/subnav_bkg_top.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+} 
+#topNav li:hover .subnav .subnav_after{
+	width:100%;
+	height:5px;
+	background-image: url(../images/subnav_bkg_bottom.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+} 
+#topNav li:hover .subnav ul{
+	height:auto;
+	background-image: url(../images/subnav_bkg_middle.png);
+	background-repeat: repeat-y;	
+}
+
+
+#topNav li:hover .subnav ul li{ 
+	float:none;
+	display:list-item;
+	background:none;
+	margin-left:6px;
+	margin-right:6px;
+}
+#topNav li:hover ul li:hover, header nav#topNav li:hover .subnav ul li.active{ 
+	background-color:#eedfb8;
+	
+	-moz-box-shadow: inset 0 0 0px rgba(0,0,0, 0);
+	-webkit-box-shadow: inset 0 0 0px rgba(0,0,0, 0);
+	
+     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 1); 
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 1); 
+
+}
+
+
+#topNav li:hover .subnav ul li a, #topNav li:hover .subnav ul li a{ 
+	color:#333;
+	font-size:12px;
+}
+#topNav li:hover .subnav ul li a:hover, #topNav li:hover .subnav ul li a:hover{ 
+	color:#00728f;
+}
+
+
+

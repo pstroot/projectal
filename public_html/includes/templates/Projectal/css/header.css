@@ -1,0 +1,470 @@
+
+
+header,
+#bigButtons,
+footer,
+.breadcrumbs{
+	margin-right:40px;
+	margin-left:40px;
+}
+
+header h1.headerBar, 
+header #cartInfo, 
+header .twitterTicker, 
+#utility-links,
+.h5-before,
+.top_shadow,
+section#bigButtons,
+footer,
+.breadcrumbs {
+	width:941px; 
+	/* width:85%; */
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Main Navigation XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+header h1.headerBar{ 
+	position:absolute;
+	z-index:11;
+	padding:0px;
+	margin-top:42px;
+	color:#FFFFFF;
+	-webkit-box-shadow: 0x 0px 8px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 1); 
+}
+header h1.headerBar#default{ 
+	height:129px;
+	background-color:#00728f;
+	background-image: url(../images/header_bkg.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;	
+}
+header h1.headerBar .tagline{
+	float:right;
+	color:#FFF;
+	font-size:32px;
+	width:430px;
+	line-height:40px;
+	margin-top:25px;
+	margin-right:40px;	
+}
+header h1.headerBar#rotatingBanner{ 
+	height:188px;
+	overflow:hidden;
+}
+
+#productinfoBody .header-after{height:245px;} /* 171 + top position from above */
+
+header h1.headerBar .logo{margin-left:41px;margin-top:38px;}
+
+
+#aboutusBody h1.headerBar{background-image: url(../images/header_bkg_3.jpg);}
+
+/* slightly different header for the product page  */
+/*
+#productinfoBody h1.headerBar{
+	background-image: url(../images/header_bkg_4.jpg);
+	height:143px;
+	background-position: left bottom;	
+	margin-bottom:20px;
+	
+}
+#productinfoBody h1.headerBar .logo{margin-left:20px;margin-top:10px;}
+#productinfoBody header h2#tagline {
+	position:absolute;
+	margin-top:83px;
+	margin-left:210px;
+	font-size:19.6px;
+	font-weight:normal;
+	display:block; 
+	z-index:12;
+}
+#productinfoBody #headerUnderline {
+	position:absolute;
+	margin-top:91px;
+	z-index:1000;
+	height:5px;
+	width:941px;
+	margin-bottom:!0px;
+	background-color:#262424;
+	border-bottom:2px solid #006882;
+}
+	
+*/
+
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXX Log-In/Log-Out Links XXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+#utility-links{
+	position:absolute;
+	height: 41px;
+	float:right;
+	text-align:right;
+	z-index:3;
+}
+#welcomeLinks, #joinOrLogin{
+	float:right;	
+	height: 41px;
+	padding-top:5px;
+}
+
+
+
+#joinOrLogin{	
+	width:195px;
+	background-image: url(../images/login_bkg_banner.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-top:14px;
+}
+#joinOrLogin a, #joinOrLogin div{
+	height:30px;
+	display:block;
+	float:left;
+	overflow:hidden;
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin-top:0px;
+	padding-top:0px;
+	
+}
+#joinOrLogin a:hover{
+	background-position: left bottom;
+}
+#joinOrLogin #join a{
+	margin-left:38px;
+	background-image: url(../images/join.gif);
+	width:48px;
+	height:16px;
+}
+#joinOrLogin #or div{
+	background-position: center top;
+	background-image: url(../images/or.gif);
+	width:28px;
+	height:10px;
+	margin-top:4px;
+}
+#joinOrLogin #login a{
+	background-image: url(../images/login.gif);
+	width:64px;
+	height:16px;
+}
+
+
+#welcomeLinks{
+	font-size:13px; 
+	color:#eedfb8;
+	padding-top:12px;
+	padding-left:20px;	
+}
+#welcomeLinks a{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+#welcomeLinks a:hover{
+	text-decoration:underline;
+}
+#welcomeLinks ul{
+	display:inline;
+}
+#welcomeLinks ul li{
+	padding-left:2px;padding-right:4px;
+	border-right: 1px solid #FFFFFF;
+}
+#welcomeLinks ul li#logout{
+	border-right: none;
+}
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXX Social Networking Links XXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+#socialNetworkingLinks{
+	margin-right:11px;
+}
+#socialNetworkingLinks .twitter{
+	background-image: url(../images/twitter_button.gif);
+	width:27px;
+}
+#socialNetworkingLinks .facebook{
+	background-image: url(../images/facebook_button.gif);
+	width:12px;
+}
+
+#socialNetworkingLinks a{
+	margin-top:7px;
+	text-indent:-9999px;
+	display:inline-block;
+	height:24px;
+	overflow:hidden;
+	background-repeat: no-repeat;
+	background-position: center top;
+	padding-right:5px;
+	padding-left:5px;
+}
+#socialNetworkingLinks a:hover{
+	background-position: center bottom;
+}
+
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX log in form XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+#loginForm-short .arrow{
+	position:absolute;
+	margin-top:-20px;
+	margin-left:200px;
+}
+#loginForm-short{
+	font-size:13px;
+	color:#4f4f4f;
+	
+	padding:10px;
+	display:none;
+	position:absolute;
+	margin-left:668px;
+	top:58px;
+	z-index:9999;
+	width:240px;
+	background-color:#eedfb8;
+	border:7px solid #abaaab;
+	border-top:10px solid #abaaab;
+	-webkit-box-shadow: 0x 0px 8px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 1); 
+}
+#loginForm-short .submitBtn{
+	border:1px solid #163037;
+	background-color:#006882;
+	font-weight:bold;
+	padding:2px;
+	color:#FFFFFF;
+	margin-top:5px;
+	 -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+	width:80px;
+}
+#loginForm-short input{
+	width:230px;
+	padding:3px;
+	border:1px solid #d7d2c6;
+	margin-top:5px;
+	 -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+	margin-bottom:10px;
+}
+#loginForm-short .checkbox{
+	width:auto;
+	margin-top:5px;
+	 -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#loginForm-short a{
+	color:#00728f;
+	text-decoration:none;
+	line-height:18px;
+	font-weight:bold;
+}
+#loginForm-short a:hover{
+	color:#00728f;
+	text-decoration:underline;
+}
+
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXX shopping cart details XXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+header #cartInfo {
+	position:absolute;
+	top:53px;
+	height:42px;
+	z-index:4;	
+ 	font-size:14px;
+	background-image: url(../images/top-shadow.png);
+	background-repeat: repeat-x;
+	background-position: center bottom;
+
+	background-color:#abaaab;
+}
+
+#cartInfo ul{
+	margin-right:10px;	
+	margin-top:6px;
+	font-weight:bold;
+	float:right;
+}
+#cartInfo ul li{ float:left;}
+#cartInfo ul li ul{ float:none;}
+
+#cartInfo #searchForm form{ display:inline; }
+#cartInfo #searchForm select{font-size:13px; }
+
+#cartInfo ul li{ 
+	vertical-align:middle;
+}
+#cartInfo img{vertical-align:middle;}
+#cartInfo .label{color:#FFFFFF;display:inline;}
+#cartInfo .value{color:#272525;display:inline;}
+
+#cartInfo #checkout,
+#cartInfo #items{
+	width:110px;
+}
+#cartInfo #checkout{
+	/* display:none; */
+}
+
+
+#cartInfo #searchForm{
+	margin-top:4px;
+	margin-right:8px;
+}
+#cartInfo #checkoutLink{
+	margin-right:-8px;
+	margin-top:-4px;
+}
+#cartInfo #subtotal{
+	margin-top:6px;
+}
+
+
+
+
+
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXX Big buttons on index page XXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+#bigButtons {
+	height:190px;
+	border-bottom:3px solid #00556c;
+	margin-bottom:0px;
+	display:none;
+	white-space: nowrap;
+	min-height:0px;	
+	overflow:hidden;
+}
+#home #bigButtons, #indexHomeBody #bigButtons {display:block;} /* this is the only page we show the big buttons on */
+
+#bigButtons .arrows{
+	position:absolute;
+	height:100px;
+	background-image: url(../images/bigButtons_arrows.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	z-index:6;	
+}
+
+#bigButtons .arrows .text{
+	text-align:center;
+	font-weight:bold;
+	color:#FFFFFF;
+	font-size:20px;
+	margin-top:18px;
+}
+
+#bigButtons ul.buttons{	
+	padding-top:59px;
+	height:202px;	
+	width:1100px;
+}
+#bigButtons ul#menu li {list-style:none; float:left;}
+#bigButtons ul#menu li a{
+	margin-right:5px;
+	display:block;
+	width:311px;
+	height:203px;
+	text-indent:-9999px;
+}
+#bigButtons ul#menu li#business a{background:url("../images/theBusiness.jpg") no-repeat center top;}
+#bigButtons ul#menu li#designer a{background:url("../images/theDesigner.jpg") no-repeat  center top;}
+#bigButtons ul#menu li#charity a{background:url("../images/theCharity.jpg") no-repeat center top;}
+
+#bigButtons ul#menu li a span {
+	width:311px;
+	height:203px;
+	display:block;
+	background-position: center top;
+	background-color:#CCCCCC;
+}
+
+/* for the hover images */
+#bigButtons ul#menu li#business a span{background:url("../images/theBusiness.jpg") no-repeat center bottom;}
+#bigButtons ul#menu li#designer a span{background:url("../images/theDesigner.jpg") no-repeat  center bottom;}
+#bigButtons ul#menu li#charity a span{background:url("../images/theCharity.jpg") no-repeat center bottom;}
+
+
+
+
+
+
+
+
+/* TOP BANNER WITH THREE COLORED BLOCKS */
+#bigButtons {
+	height:192px;
+}
+.defaultBanner{
+	background-color:#272525;
+	width:943px;
+	height:188px;
+	font-family:Arial, Helvetica, sans-serif;
+	background-repeat: repeat;	
+}
+.topBannerHeader{
+	position:absolute;	
+}
+.topBannerBlock{
+	margin-top:63px;
+	height:125px;
+	width:33%;
+	display:inline-block;
+	color:#FFFFFF;
+	text-align:center;
+	text-transform:uppercase;
+	font-size:15px;
+	background-image: url(../../../../images/topbanner/default/pattern.png);
+}
+.topBannerBlock p{
+	padding:0px;margin:0px;
+	font-weight:bold;
+	padding-top:40px;
+	margin-bottom:3px;
+	
+}
+.topBannerBlock a,
+.topBannerBlock a:visited{
+	font-size:12px;
+	color:#FFFFFF;
+	font-weight:normal;
+}
+.topBannerBlock a:hover{
+	color:#FFFFFF;
+}
+.topBannerBlock#business{
+	background-color:#e89f2d;
+}
+.topBannerBlock#artist{
+	background-color:#7aac1a;
+}
+.topBannerBlock#charity{
+	background-color:#44bedd;
+}
+

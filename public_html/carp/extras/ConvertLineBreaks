@@ -1,0 +1,27 @@
+#!/usr/bin/perl
+
+# Converts text file line breaks between DOS, Mac and UNIX formats
+# By Antone Roundy
+# Public Domain
+# No technical support is available for this script
+
+($#ARGV==2) || die "Usage: ConvertLineBreaks sourcefile destinationfile (dos|mac|unix)\n\n";
+
+$nl=(($ARGV[2] eq 'dos')?"\r\n":(($ARGV[2] eq 'mac')?"\r":(($ARGV[2] eq 'unix')?"\n":'')));
+
+length($nl) || die "Usage: ConvertLineBreaks sourcefile destinationfile (dos|mac|unix)\n\n";
+
+open(fIn,$ARGV[0]) || die "Can't open input file";
+
+@data=<fIn>;
+close(fIn);
+
+open(fOut,"+>$ARGV[1]") || die "Can't open output file";
+
+foreach $line (@data) {
+	$line=~s/(\r\n|\r|\n)/$nl/go;
+	print fOut $line;
+}
+close(fOut);
+print "Success\n\n";
+exit 0;

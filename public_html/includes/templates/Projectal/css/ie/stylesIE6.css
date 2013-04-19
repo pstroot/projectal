@@ -1,0 +1,67 @@
+header h2 nav{
+	width:503px;
+}
+header h2 nav li#info a{padding-right:18px;}
+header h2 nav li .subnav{
+	margin-top:40px;
+} 
+#home #bigButtons {display:none; } /* IE6 cannot handle the canvas tag */
+header h2 nav li.active .subnav{ 
+	display:block;
+}
+
+header h2 nav li .subnav #subnav_before{
+	display: none;
+} 
+header h2 nav li .subnav #subnav_after{
+	display: none;
+} 
+header h2 nav li .subnav{
+	background-color:#eedfb8;
+	width:auto;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+header h2 nav li .subnav ul{
+	width:auto;
+	height:auto;
+	background-image: none;	
+	background-color:#eedfb8;
+}
+header h2 nav li ul li{ 
+	margin-left:0px;
+	margin-right:0px;
+}
+header h2 nav li .subnav ul li{
+	display:inline;
+	text-align:center;
+	width:auto;
+	border-left:1px solid #000000;
+	
+}
+header h2 nav li .subnav ul li a{
+	width:auto;
+}
+
+
+header h5{ /* shopping cart links*/
+	background-image: url(../images/top_shadow.gif);
+}
+
+
+header h1{ /* Main Navigation */
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none; 	
+	margin-left:0px;
+}
+
+
+#bigButtons .arrows{
+	background-image: url(../images/bigButtons_arrows.gif);
+}
+header h2 nav li{ 
+	background-image: url(../images/button_bottom_gradient.gif);	
+}
+header h2 nav li#info a{ 
+	background-image:none;
+}

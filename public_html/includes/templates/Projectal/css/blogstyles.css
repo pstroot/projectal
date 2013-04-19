@@ -1,0 +1,179 @@
+
+.content {
+	margin-bottom: 36px;
+}
+.content,
+.content input,
+.content textarea {
+	color: #333;
+	font-size: 16px;
+	line-height: 24px;
+}
+.content p,
+.content ul,
+.content ol,
+.content dd,
+.content pre,
+.content hr {
+	margin-bottom: 24px;
+}
+.content ul ul,
+.content ol ol,
+.content ul ol,
+.content ol ul {
+	margin-bottom: 0;
+}
+.content pre,
+.content kbd,
+.content tt,
+.content var {
+	font-size: 15px;
+	line-height: 21px;
+}
+.content code {
+	font-size: 13px;
+}
+.content dt,
+.content th {
+	color: #000;
+}
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+	color: #000;
+	line-height: 1.5em;
+	margin: 0 0 20px 0;
+}
+.content table {
+	border: 1px solid #e7e7e7;
+	margin: 0 -1px 24px 0;
+	text-align: left;
+	width: 100%;
+}
+.content tr th,
+.content thead th {
+	color: #888;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 18px;
+	padding: 9px 24px;
+}
+.content tr td {
+	border-top: 1px solid #e7e7e7;
+	padding: 6px 24px;
+}
+.content tr.odd td {
+	background: #f2f7fc;
+}
+.content .entry-title {
+	color: #000;
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 1.3em;
+	margin-bottom: 0;
+}
+.content .entry-summary p:last-child {
+	margin-bottom: 12px;
+}
+
+/* =Asides
+-------------------------------------------------------------- */
+
+.home .content .category-asides p {
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+
+/* =Images
+-------------------------------------------------------------- */
+
+.content img {
+	margin: 0;
+	height: auto;
+	max-width: 640px;
+	width: auto;
+}
+.content .attachment img {
+	max-width: 900px;
+}
+.content .alignleft,
+.content img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 24px;
+	margin-top: 4px;
+}
+.content .alignright,
+.content img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 24px;
+	margin-top: 4px;
+}
+.content .aligncenter,
+.content img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.content img.alignleft,
+.content img.alignright,
+.content img.aligncenter {
+	margin-bottom: 12px;
+}
+.content .wp-caption {
+	background: #f1f1f1;
+	line-height: 18px;
+	margin-bottom: 20px;
+	padding: 4px;
+	text-align: center;
+}
+.content .wp-caption img {
+	margin: 5px 5px 0;
+}
+.content .wp-caption p.wp-caption-text {
+	color: #888;
+	font-size: 12px;
+	margin: 5px;
+}
+.content .wp-smiley {
+	margin: 0;
+}
+.content .gallery {
+	margin: 0 auto 18px;
+}
+.content .gallery .gallery-item {
+	float: left;
+	margin-top: 0;
+	text-align: center;
+	width: 33%;
+}
+.content .gallery img {
+	border: 2px solid #cfcfcf;
+}
+.content .gallery .gallery-caption {
+	color: #888;
+	font-size: 12px;
+	margin: 0 0 12px;
+}
+.content .gallery dl {
+	margin: 0;
+}
+.content .gallery img {
+	border: 10px solid #f1f1f1;
+}
+.content .gallery br+br {
+	display: none;
+}
+.content .attachment img { /* single attachment images should be centered */
+	display: block;
+	margin: 0 auto;
+}
+

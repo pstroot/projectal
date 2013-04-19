@@ -1,0 +1,8 @@
+[04-Mar-2013 05:07:13] PHP Fatal error:  Call to undefined function  add_shortcode() in /home/project/public_html/blog/wp-includes/media.php on line 609
+[05-Mar-2013 13:35:53] PHP Fatal error:  Class 'Walker' not found in /home/project/public_html/blog/wp-includes/category-template.php on line 766
+[05-Mar-2013 14:47:00] PHP Warning:  require(ABSPATHWPINC/SimplePie/Misc.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/project/public_html/blog/wp-includes/class-simplepie.php on line 5
+[05-Mar-2013 14:47:00] PHP Warning:  require(ABSPATHWPINC/SimplePie/Misc.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/project/public_html/blog/wp-includes/class-simplepie.php on line 5
+[05-Mar-2013 14:47:00] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/SimplePie/Misc.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/project/public_html/blog/wp-includes/class-simplepie.php on line 5
+[05-Mar-2013 15:58:44] PHP Fatal error:  Call to undefined function  add_filter() in /home/project/public_html/blog/wp-includes/class-wp-embed.php on line 20
+[05-Mar-2013 18:21:28] PHP Fatal error:  Class 'IXR_Server' not found in /home/project/public_html/blog/wp-includes/class-wp-xmlrpc-server.php on line 22
+[06-Mar-2013 00:22:13] PHP Fatal error:  Call to undefined function  add_filter() in /home/project/public_html/blog/wp-includes/user.php on line 71

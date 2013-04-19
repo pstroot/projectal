@@ -1,0 +1,94 @@
+/*
+Theme Name: ProjectAl
+Theme URI: http://wordpress.org/extend/themes/twentyten
+Description: Based on the Twenty Ten Theme, with a few adjustments for ProjectAl. It should be okay to upgrade the TwentyTen theme without affecting the updates in this theme.
+Author: Paul Stroot
+Author URI: http://paulstroot.com/
+Version: 1.0
+Text Domain: projectal
+Template: twentyten
+*/
+
+
+@import url('../twentyten/style.css');
+
+
+body {
+	background-color: #898888;
+    background-image: url("../../../../images/topbanner/default/pattern.png");
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+body, input, textarea{line-height:13px;}
+#main{padding-top:0px;}
+#content{	margin-right:0px;}
+#footer{ clear:none; width:auto; }
+$woz_footer, #wpstats{display:none;}
+
+
+
+.widget-title {
+
+	-webkit-box-shadow: 0x 0px 4px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 1); 
+	background-color:#00708c;
+	width:100%;
+	padding:6px;
+	margin-bottom:3px;
+	color:#FFF;
+
+}
+
+
+/* Main sidebars */
+
+#main .widget-area ul {
+	margin-left: 0;
+	padding: 0 20px 0 0;
+}
+
+#main .widget-area ul ul {
+	margin-left: 0;
+	border: none;
+	padding: 6px;	
+	width:100%;
+}
+#main .widget-area ul ul ul {padding: 0;}
+
+
+.widget-container {margin: 0 0 10px;}
+.sideBoxContent,
+.widget-container ul{
+	-webkit-box-shadow: 0x 0px 4px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 1); 
+	background-color:#FFFFFF;
+	width:100%;
+	padding:6px;
+	font-size:10px;
+	color:#00708c;
+	margin-bottom:10px;
+}
+.widget-container ul{
+	margin:0px;	
+}
+
+#blogSidebar form#searchform #searchsubmit{
+	font-size: 10px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    padding: 3px 7px;
+	
+	border: medium none;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 0 #000000;
+    display: inline-block;
+    font-family: Helvetica,Arial,Sans-Serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    vertical-align: middle;
+	
+	background: -moz-linear-gradient(center top , #278F27, #136913) repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+}

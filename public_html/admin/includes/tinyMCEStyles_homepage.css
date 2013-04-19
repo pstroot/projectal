@@ -1,0 +1,25 @@
+
+body {
+	background-color: #101e36;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#f6eacc;
+	padding:45px;
+	background-image: url(../../images/homepage_image.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	width:440px;
+}
+
+.headline{
+	padding:0px;
+	margin:0px;
+	font-weight:normal;
+	font-size:22px;
+}
+.highlight{
+	background-color:#FFFF00;
+	color:#000000;
+}
+
+

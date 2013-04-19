@@ -1,0 +1,1 @@
+Need some copy for the MEMBERSHIP page

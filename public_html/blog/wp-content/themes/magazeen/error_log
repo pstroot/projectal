@@ -1,0 +1,3 @@
+[11-Jan-2013 10:49:16] PHP Notice:  Undefined index:  extension in /home/project/public_html/blog/wp-content/themes/magazeen/timthumb.php on line 245
+[11-Jan-2013 10:49:16] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: gd-jpeg: JPEG library reports unrecoverable error:  in /home/project/public_html/blog/wp-content/themes/magazeen/timthumb.php on line 206
+[11-Jan-2013 10:49:16] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: '/home/project/public_html/' is not a valid JPEG file in /home/project/public_html/blog/wp-content/themes/magazeen/timthumb.php on line 206

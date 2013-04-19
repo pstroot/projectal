@@ -1,0 +1,79 @@
+#cab-author {
+	margin-bottom: 15px;
+	border: 1px solid #e1e1e1;
+	border-bottom: 1px solid #979797;
+	background: url(images/author-top-background.png) repeat-x;
+	padding-top: 1px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	position: relative;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+	min-height: 120px;
+}
+
+#cab-twitter, #cab-facebook, #cab-google_plus, #cab-linkedin {
+	
+} 
+
+.cab-author-name {
+	font-size:	16px;
+	color: #201F1F !important;
+	font-weight:bold;
+}
+
+.cab-author-inner {
+	background: #fbfbfb url(images/author-background.png) repeat-x bottom left;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 17px 21px 10px 17px;
+	min-height: 100px;
+}
+
+.cab-author-inner .cab-author-image{
+	display: block;
+	width: 62px;
+	position: absolute;
+	padding-left: 6px;
+	padding-top: 6px;
+	min-height: 120px;
+}
+
+.cab-author-image img, #cab-author .avatar  {
+	border: none !important;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	max-height: 75px;
+	max-width: 75px;
+}
+
+.cab-author-inner .cab-author-image .cab-author-overlay{
+	width: 87px;
+	position: absolute;
+	height: 87px;
+	top: 0px;
+	left: 0px;
+	background: url(images/author-overlay-background.png) no-repeat;
+}
+
+.cab-author-inner .cab-author-info {
+	padding-left: 110px;
+	
+	margin: 0;
+	outline: 0 none;
+	vertical-align: baseline;
+	border: 0 none;
+	font-size: 100%;
+}
+
+.cab-author {
+	color: #201F1F !important;
+	text-shadow: none !important;
+}
+
+.cab-author	{
+	text-shadow: none !important;
+}

@@ -1,0 +1,1189 @@
+<html>
+<head>
+	<title>Introduction to RSS Feed Processing Using CaRP</title>
+	<style type="text/css">
+		body { background:#fff; }
+		.indent { margin:5px 0 15px 20px; }
+		.mindent { margin:0 0 10px 20px; }
+		.headline {
+			font-weight:bold;
+			font-size:135%;
+			color:#900;
+		}
+		.code {
+			margin:10px 30px;
+			padding:7px 10px;
+			background:#ccc;
+			border:1px solid #666;
+		}
+		.table {
+			border:1px solid #666;
+			margin:1em 30px;
+			background:#ccc;
+		}
+		.table td {
+			padding:5px 10px;
+		}
+		.th {
+			background:#03c;
+			color:#fff;
+			font-weight:bold;
+		}
+		.table .note {
+			background:#eee;
+		}
+		.widelist li { margin-bottom:1em; }
+		.thinlist li {margin-bottom:0; }
+		form { display:inline; }
+		.hilite { background-color:#ff3; }
+		.smallprint { font-size:90%; }
+		.compare {
+			margin:10px 30px 0 30px;
+			border:2px solid #666;
+			background:#ccc;
+		}
+		.compare td {
+			padding:3px 5px;
+			background:#f6f6f6;
+			width:33%;
+		}
+		.compare .headers {
+			background:#900;
+			color:#fff;
+		}
+		.compare .headers td {
+			background:#900;
+			font-weight:bold;
+			font-size:110%;
+		}
+		.carpodd, .carpeven {
+			padding:5px 8px;
+		}
+		.carpodd {
+			background-color:#36c;
+			color:#ccc;
+		}
+		.carpodd a {
+			color:#fff;
+		}
+		.carpeven {
+			background-color:#fff;
+			color:#333;		
+		}
+	</style>
+</head>
+<body>
+
+
+<div style="float:left;margin-right:15px;text-align:center;">
+	<img src="img/carp.jpeg" width="100" height="100" /><br /><br />
+	<img src="img/gecko-inv-tall-blue-71x100.gif" width="71" height="100" />
+</div>
+
+<span style="color:#03c;">
+<span style="font-weight:bold;font-size:170%;">Introduction to RSS Feed Processing Using CaRP</span><br>
+&copy; 2002-8 Gecko Tribe, LLC</span><br /><br />
+
+<div style="float:left;border:1px solid #999;background:#eee;padding:8px;line-height:135%;">
+	<a href="#moreinfo">Where to find more information</a><br />
+	<a href="#upgrade">Why buy when you can have it for free?</a><br />
+	<a href="#extras">The "extras" Directory</a><br />
+	<a href="#install">Installing CaRP</a><br />
+	<a href="#displaying">Displaying a feed</a><br />
+	<a href="#rss">The parts of an RSS feed</a><br />
+	<a href="#atom">RSS vs. Atom</a><br />
+	<a href="#config">Introduction to CaRP's configuration system</a><br />
+	<a href="#grouper">Using CaRP with Grouper</a><br />
+	<a href="#pagetypes">Using CaRP in PHP, HTML, ASP and other webpages</a><br />
+	<a href="#garbage">Question marks and garbage characters</a><br />
+	<a href="#xmlerrors">XML Errors - what to do?</a><br />
+	<a href="#images">Displaying images</a><br />
+	<a href="#poweredby">Turning off the "Newsfeed display by CaRP" message</a><br />
+	<a href="#hosting">CaRP-compatible web hosting</a>
+</div>
+
+<br clear="left" /><br />
+
+<b>Thank you for choosing CaRP,</b>
+	especially if you chose CaRP Evolution! :-)
+This document will help you get CaRP installed and running on your website,
+	and will answer a few of the most common questions that CaRP users ask.
+If you have other questions, don't hesitate to contact support or visit the CaRP User Forum
+	(links for both can be found below).
+
+<div style="text-align:right;margin:8px 0 12px 0;"><i>- Antone Roundy&nbsp;&nbsp;&nbsp;</i></div>
+
+<a name="moreinfo" class="headline">Where to find more information</a>
+<div style="float:right;margin-left:10px;border:1px solid #333;background:#eee;padding:8px;">
+	<b>Search the Documentation</b>
+	<!-- SiteSearch Google -->
+	<form method="get" action="http://www.google.com/custom" target="_top">
+	<table border="0" bgcolor="#eeeeee">
+	<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+
+	<input type="hidden" name="domains" value="carp.docs.geckotribe.com"></input>
+	<input type="text" name="q" size="31" maxlength="255" value=""></input>
+	</td></tr>
+	<tr>
+	<td nowrap="nowrap">
+	<table>
+	<tr>
+	<td>
+	<input type="radio" name="sitesearch" value=""></input>
+	<font size="-1" color="#000000">Web</font>
+	</td>
+	<td>
+	<input type="radio" name="sitesearch" value="carp.docs.geckotribe.com" checked="checked"></input>
+	<font size="-1" color="#000000">carp.docs.geckotribe.com</font>
+	</td>
+	</tr>
+	</table>
+	<input type="submit" name="sa" value="Google Search"></input>
+	<input type="hidden" name="client" value="pub-4973058046304178"></input>
+	<input type="hidden" name="forid" value="1"></input>
+	<input type="hidden" name="ie" value="ISO-8859-1"></input>
+	<input type="hidden" name="oe" value="ISO-8859-1"></input>
+	<input type="hidden" name="cof" value="GALT:#000099;GL:1;DIV:#99AABB;VLC:660099;AH:center;BGC:FFFFFF;LBGC:FFFFFF;ALC:0000FF;LC:0000FF;T:001133;GFNT:223472;GIMP:223472;LH:46;LW:724;L:https://secure.geckotribe.com/img/logos/gt-wide-logo.gif;S:http://www.geckotribe.com/;FORID:1;"></input>
+	<input type="hidden" name="hl" value="en"></input>
+	</td></tr></table>
+	</form>
+	<!-- SiteSearch Google --><br />
+
+	<b>Search the User Forum</b><br />
+	<form action="http://forums.geckotribe.com/search.php?mode=results" method="POST">
+	<input type="hidden" name="search_terms" value="all" />
+	<input type="hidden" name="search_fields" value="all" />
+	<input name="search_keywords" size="31" /><br />
+		<input type="submit" value="Forum Search" />
+	</form><br /><br />
+
+	<b>Search for RSS Feeds</b><br />
+	<form action="http://chordata.info/search.php" method="post">
+	<input name="q" size="31" /><br />
+	<input type="submit" value="Feed Search" />
+	</form></div>
+
+<div class="indent">
+	<b>Online Documentation</b>
+	<div class="mindent">
+		<a href="http://carp.docs.geckotribe.com/conf/display/">Display formatting</a><br />
+		<a href="http://carp.docs.geckotribe.com/">Index</a><br />
+		<a href="http://carp.docs.geckotribe.com/functions/">Function reference</a><br />
+		<a href="http://carp.docs.geckotribe.com/examples/">Example code</a><br /><br />
+	</div>
+
+	<a href="http://forums.geckotribe.com/?c=2">CaRP User Forum</a> -
+		special thanks to those users who are so helpful in answering others' questions in the forum<br /><br />
+	
+	<a href="https://secure.geckotribe.com/helpdesk/">Technical Support</a><br /><br />
+	
+	<b>CaRP Tips Weblog</b>
+	<div class="mindent">
+		<a href="http://carp.docs.geckotribe.com/tips/">Weblog</a><br />
+		<a href="http://rss.geckotribe.com/rss/9.rss">RSS Feed</a>
+	</div>
+</div>
+
+
+<a name="upgrade" class="headline">Why buy when you can have it for free?</a>
+<div class="indent">
+	If CaRP
+	SE
+	has all the features you want and you don't feel inclined or able to make a "donation" by upgrading to CaRP Evolution,
+		then by all means, stick with CaRP
+		SE.
+	But so that you can make an informed decision,
+		a few examples are shown below of the difference that CaRP Evolution can make in your webpages without costing you an arm and a leg.
+	If you like what you see, <a href="http://carp.docs.geckotribe.com/download.php">buy CaRP Evolution</a>,
+		and upgrade by simply overwriting CaRP
+		SE
+		with your upgrade version--<b class="hilite">you won't need to run the installation script again.</b><br /><br />
+	
+	
+	<h3>Atom Feeds</h3>
+	<div class="indent">
+		CaRP
+		SE
+		can display RSS 0.9X, 1.X and 2.X feeds, <b class="hilite">but not Atom feeds.</b>
+		CaRP Evolution can also display Atom 0.3 feeds,
+			as well as the increasingly popular Atom 1.0 format.
+		<a href="http://carp.docs.geckotribe.com/download.php">Upgrade Now</a>
+	</div>	
+	
+	
+	<h3>Make "Mashup" Feeds</h3>
+	<div class="indent">
+		CaRP
+		SE
+			can aggregate multiple feeds and display them together on a webpage,
+			but CaRP Evolution can go one better --
+			it can create RSS feeds by aggregating content from multiple feeds.
+		And it can perform much more powerful filtering to select just the items you want.
+		<a href="http://carp.docs.geckotribe.com/download.php">Upgrade Now</a>
+	</div>
+	
+	
+	
+	<h3>Store In A MySQL Database</h3>
+	<div class="indent">
+		CaRP Evolution can store parsed feeds in a MySQL database for other scripts to access.
+		(CaRP
+		SE
+			can use MySQL for caching, but caches only raw or HTML formatted data --
+			individual pieces of data like the headline, link, date, description, etc., are not stored separately for easy access).</li>
+</div>
+
+
+	<h3>Vary The Formatting Of Items</h3>
+	<div class="indent">
+		CaRP
+		SE
+			gives you control of the formatting of the items in a feed,
+			but CaRP Evolution can format each item in the same feed differently.
+		Why would you want to do that?
+		Here's an example:
+		
+		<table class="compare" cellspacing="2">
+		<tr class="headers">
+			<td>CaRP
+		SE
+			</td>
+			<td>CaRP Evolution</td>
+		</tr><tr>
+			<td valign="top">
+				<a href="#">CaRP displays feeds on websites</a><br />
+				CaRP is an RSS to HTML converter.
+				It is used to display RSS feeds on webpages.<br /><br />
+				
+				<a href="#">RSS feeds are good for SEO</a><br />
+				Having automatically updating content on your webpage brings the search engines back more often
+					and helps your search engine position by increasing your site's freshness.<br /><br />
+				
+				<a href="#">Get content for your site automatically</a><br />
+				Use CaRP to give your site's visitors something new to read every day (or more often)
+					without having to write or upload it yourself.<br /><br />
+				
+				<a href="#">Reuse your own content easily</a><br />
+				Do you have a blog?
+				CaRP can display your latest blog headlines on your other websites,
+					automatically cross linking them and enabling you to reuse your own content.<br /><br />
+				
+				<a href="#">Add RSS content to your WordPress posts</a><br />
+				The free CaRP/WP plugin for WordPress works with CaRP to display live feeds within WordPress posts.<br /><br />
+				
+				<i>etc...</i>
+			</td>
+			<td valign="top">
+				<div class="carpodd">
+					<a href="#"><b>CaRP displays feeds on websites</b></a><br />
+					CaRP is an RSS to HTML converter.
+					It is used to display RSS feeds on webpages.
+				</div>
+				<div class="carpeven">
+					<a href="#"><b>RSS feeds are good for SEO</b></a><br />
+					Having automatically updating content on your webpage brings the search engines back more often
+						and helps your search engine position by increasing your site's freshness.
+				</div>
+				<div class="carpodd">
+					<a href="#">Get content for your site automatically</a><br />
+				</div>
+				<div class="carpeven">
+					<a href="#">Reuse your own content easily</a><br />
+				</div>
+				<div class="carpodd">
+					<a href="#">Add RSS content to your WordPress posts</a><br />
+				</div>
+			
+				<i>etc...</i><br /><br />
+				
+				Notice:
+				<ul>
+				<li>the alternating background and text colors.</li>
+				<li>the first two headlines are bold, the others aren't.</li>
+				<li>the "description" is displayed only for the first two items.</li>
+				</ul>
+				This is just one example -- you decide exactly how you want everything displayed.
+				<a href="http://carp.docs.geckotribe.com/download.php">Upgrade Now</a>
+			</td>
+		</tr>
+		</table>
+	</div>	
+	
+
+	<h3>Images, Authors, Dates and Podcasts</h3>
+	<div class="indent">
+		<b class="hilite">CaRP
+		SE
+		can't display them, CaRP Evolution can.</b>
+		(Exception: with the right "descriptiontags" setting,
+			CaRP
+		SE
+			can display images embedded in the feed's "description" elements,
+			but not images pointed to by the "image" or "enclosure" element.)
+		Also notice how CaRP Evolution can optionally display relative dates (eg. "45 minutes ago").
+		<a href="http://carp.docs.geckotribe.com/download.php">Upgrade Now</a>
+		<table class="compare" cellspacing="2">
+		<tr class="headers">
+			<td>CaRP
+		SE
+			</td>
+			<td>CaRP Evolution</td>
+		</tr><tr>
+			<td valign="top">
+				<a href="#">CaRP displays feeds on websites</a><br />
+				CaRP is an RSS to HTML converter.
+				It is used to display RSS feeds on webpages.<br /><br />
+				
+				<a href="#">RSS feeds are good for SEO</a><br />
+				Having automatically updating content on your webpage brings the search engines back more often
+					and helps your search engine position by increasing your site's freshness.<br /><br />
+				
+				<i>etc...</i><br /><br />
+				
+				<i>CaRP
+		SE
+				can't process as many parts of the feed as CaRP Evolution can.
+				In a real podcast feed, those Podcast buttons would be linked to the audio files.</i>
+			</td>
+			<td valign="top">
+				<a href="#">CaRP displays feeds on websites</a><br />
+				<img src="img/carp.jpeg" style="height:67px;width:67px;float:left;margin-right:6px;" />
+				<i>by Antone Roundy - 45 minutes ago</i><br />
+				<a href="#"><img src="img/podcast-purple-white.png" border="0" /></a>
+				CaRP is an RSS to HTML converter.
+				It is used to display RSS feeds on webpages.<br /><br />
+				
+				<a href="#">RSS feeds are good for SEO</a><br />
+				<img src="img/antone-roundy.jpeg" style="height:43px;width:62px;float:left;margin-right:6px;" />
+				<i>by Antone Roundy - 1 day ago</i><br />
+				<a href="#"><img src="img/podcast-purple-white.png" border="0" /></a>
+				Having automatically updating content on your webpage brings the search engines back more often
+					and helps your search engine position by increasing your site's freshness.<br /><br />
+				
+				<i>etc...</i>
+			</td>
+		</tr>
+		</table>
+	</div>
+	
+	<h3>Non-core RSS Elements</h3>
+	<div class="indent">
+		<b class="hilite">CaRP Evolution can map less common RSS elements like "content:encoded"</b> to it's internal element names (like "desc" for the description):
+		<a href="http://carp.docs.geckotribe.com/download.php">Upgrade Now</a>
+		<table class="compare" cellspacing="2">
+		<tr class="headers">
+			<td>CaRP
+		SE
+			</td>
+			<td>CaRP Evolution</td>
+		</tr><tr>
+			<td valign="top">
+				<a href="#">CaRP displays feeds on websites</a><br /><br />
+				
+				<a href="#">RSS feeds are good for SEO</a><br /><br />
+				
+				<i>etc...</i><br /><br />
+				
+				<i>Notice how even the "descriptions" are missing this time.
+				This will happen in feeds that put the description in the "content:encoded" element.</i>
+			</td>
+			<td valign="top">
+				<a href="#">CaRP displays feeds on websites</a><br />
+				<i>by Antone Roundy - 45 minutes ago</i><br />
+				CaRP is an RSS to HTML converter.
+				It is used to display RSS feeds on webpages.<br /><br />
+				
+				<a href="#">RSS feeds are good for SEO</a><br />
+				<i>by Antone Roundy - 1 day ago</i><br />
+				Having automatically updating content on your webpage brings the search engines back more often
+					and helps your search engine position by increasing your site's freshness.<br /><br />
+				
+				<i>etc...</i>
+			</td>
+		</tr>
+		</table>
+	</div>
+	
+	<h3>Text Encodings</h3>
+	<div class="indent">
+		<b class="hilite">CaRP
+		SE
+		can handle UTF-8, ISO-8859-1 and US-ASCII.</b>
+		CaRP Evolution can handle just about anything in just about any language.
+		(Note: your server must offer "iconv" support to PHP applications to handle other encodings).
+		<a href="http://carp.docs.geckotribe.com/download.php">Upgrade Now</a>
+		<table class="compare" cellspacing="2">
+		<tr class="headers">
+			<td>CaRP
+		SE
+			</td>
+			<td>CaRP Evolution</td>
+		</tr><tr>
+			<td valign="top">
+				[CaRP] XML error: not well-formed (invalid token) at line 4.
+				CaRP
+		SE
+				is unable to process this feed's encoding (WINDOWS-1252).
+				Upgrading will likely solve this problem.<br /><br />
+				
+				<i>Some feeds won't get displayed at all by CaRP
+		SE
+				because it can't process their character encodings.</i>
+			</td>
+			<td valign="top">
+				<a href="#">CaRP displays feeds on websites</a><br />
+				<i>by Antone Roundy - 45 minutes ago</i><br />
+				CaRP is an RSS to HTML converter.
+				It is used to display RSS feeds on webpages.<br /><br />
+				
+				<a href="#">RSS feeds are good for SEO</a><br />
+				<i>by Antone Roundy - 1 day ago</i><br />
+				Having automatically updating content on your webpage brings the search engines back more often
+					and helps your search engine position by increasing your site's freshness.<br /><br />
+				
+				<i>etc...</i>
+			</td>
+		</tr>
+		</table>
+	</div>	
+	<h3>Acronyms, Foul Language, etc.</h3>
+	<div class="indent">
+		CaRP Evolution can replace acronymns with expanded text (or put them in "acronym" tags),
+			"bleep" foul language, etc.
+		<a href="http://carp.docs.geckotribe.com/download.php">Upgrade Now</a>
+		<table class="compare" cellspacing="2">
+		<tr class="headers">
+			<td>CaRP
+		SE
+			</td>
+			<td>CaRP Evolution</td>
+		</tr><tr>
+			<td valign="top">
+				<a href="#">Using RSS for SEO boosts ROI</a><br />
+				If your CEO and CFO go MIA with your IRA,
+					you'll need to boost your ROI to prevent your retirement from being DOA.<br /><br />
+				
+				<a href="#">What Zippy said to Zooty</a><br />
+				Zippy gave Zooty a heavy lecture today,
+					and when he was done, he said "BTW Zooty, you're a doofus!"<br /><br />
+				
+				<i>etc...</i><br /><br />
+				
+				<i>CaRP
+		SE
+				displays the feed content as-is.</i>
+			</td>
+			<td valign="top">
+				<a href="#">Using <acronym title="Really Simple Syndication">RSS</acronym> for search engine optimization boosts <acronym title="Return on Investment">ROI</acronym></a><br />
+				If your <acronym title="Chief Executive Officer">CEO</acronym> and <acronym title="Chief Financial Officer">CFO</acronym> go missing in action with your <acronym title="individual Retirement Account">IRA</acronym>,
+					you'll need to boost your return on investment to prevent your retirement from being <acronym title="Dead on Arrival">DOA</acronym>.<br /><br />
+				
+				<a href="#">What Zippy said to Zooty</a><br />
+				Zippy gave Zooty a heavy lecture today,
+					and when he was done, he said "By the way Zooty, you're a <i>[bleep]</i>!"<br /><br />
+				
+				<i>etc...</i><br /><br />
+				
+				<i>CaRP Evolution's "replace text" plugin can make these kinds of changes.</i>
+			</td>
+		</tr>
+		</table>
+	</div>	
+</div>
+
+
+
+<a name="extras" class="headline">The "extras" Directory</a>
+<div class="indent">
+	If the computer that you edit your webpages on runs the Windows operating system, you can probably skip this section --
+		come back to it only if you have trouble editing "carpconf.php".<br/><br />
+
+	<b class="hilite">If you edit your webpages on Mac OS, UNIX, Linux, or BSD,</b>
+		you may wish to substitute the copy of "carpconf.php" from the appropriate subdirectory of the "extras" directory for the one in the "carp" directory.
+	This will only be necessary if, when you open "carpconf.php" in your editor, the display is messed up or it displays "garbage characters" wherever there's a line break.
+	The only difference between the files is the invisible characters that are used for the line breaks.<br /><br />
+	
+	You shouldn't need to edit any of the other files, so alternative versions of them are not provided.
+	However, if for some reason you do wish to convert the linebreaks in any of the other files,
+		you may find the script "ConvertLineBreaks" useful.
+	Please note that no technical support will be provided for this script other than to say that:
+	<ul>
+	<li>It is a Perl script that will need to be run from the command line.</li>
+	<li>Be sure to set the "execute" bit to make it executable (ie., set the access permissions to something like "755").</li>
+	<li>To run the script, type "./ConvertLineBreaks path-and-name-of-input-file path-and-name-of-output-file target-format",
+		where "target-format" may be "dos", "mac" or "unix".</li>
+	</ul>
+</div>
+
+
+
+<a name="install" class="headline">Installing CaRP</a>
+<div class="indent">
+	<b class="hilite">If you already have CaRP 3.5 or later (Free, SE, Koi or Evolution) installed and working:</b>
+	
+	<ol class="widelist">
+	<li>If you made any changes to your old carpconf.php
+		(for example, if the installer script gave you mySQL caching setup code to paste there,
+		or if you made any customizations of your own),
+		open your old copy of carpconf.php, copy your changes, and paste them into the new carpconf.php.</li>
+	<li>If you're using CaRP Evolution's MySQL plugin
+			<b>(not MySQL caching, but the MySQL plugin)</b>,
+			execute the following two SQL commands (in phpMyAdmin or whatever tool you use)
+			to update your database structure.
+		(If you used different table names, be sure to change them before executing the commands):<br /><br />
+		<code>alter table rssfeeds add real_url text;<br />
+		alter table rssitems add podcasturl varchar(255);</code></li>
+	<li>Upload all of the new files in the "carp" directory except for carpsetupinc.php, PHPFTP.php and PHPTelnet.php,
+		overwriting the old ones.
+		(The 3 files named are used only during installation, and are not needed afterward.)</li>
+	<li>Backwards compatibility with the following configuration settings has been removed --
+			if your code still uses any of these settings,
+			you'll need to update it to use the settings listed in parenthesis instead:
+			corder (cborder), bc (bcb), ac (acb), clinktarget and ilinktarget (linktarget).
+	</ol>
+	
+	<b class="hilite">For a fresh installation, the following process is usually the simplest:</b>
+
+	<ol class="widelist">
+	<li>Decide where you want to put the CaRP scripts on your webserver, and create a new folder for them if necessary.<br>
+		<b>Recommendations:</b>
+		<ul class="thinlist">
+		<li>We recommend that the folder be named "carp".
+			This will make it more likely that the setup assistant will be able to locate it automatically.
+			If you are going to name it "carp", you may create it by simply uploading the "carp" folder from the installation archive and its contents (see next step).</li>
+		<li>It is good security practice to install scripts like CaRP in a location that cannot be accessed directly by a web browser.
+			For example, if your web folder is located at "/home/joe/public_html", a good location to install CaRP would be "/home/joe/carp" rather than "/home/joe/public_html/carp".
+			<b>However, if you see an error message about "safe mode", you may need to install CaRP inside your web directory.</b></li>
+		</ul></li>
+	<li>Upload all of the contents of the "carp" folder from the installation archive to the location chosen in the previous step.</li>
+	<li>Upload carpsetup.php to your webserver (in a location where you'll be able to load it in your web browser).<br>
+		<b>Recommendation:</b>
+		For simplicity, we recommend uploading it to your web root folder.
+		For example, if your web folder is located at "/home/joe/public_html", upload it to there.</li>
+	<li>Load carpsetup.php in your web browser.
+		For example, if you uploaded it to "/home/joe/public_html/carpsetup.php" and your website address is http://www.webhost.com/~joe/,
+			load http://www.webhost.com/~joe/carpsetup.php in your web browser.</li>
+	<li>Follow the directions that are shown in that page.
+		If you see a message about unsupported functions, that means that your web host has turned off support for functions which are necessary for CaRP to function.
+		In that case, you will either need to contact your web host to see if they will re-enable those functions for you or install CaRP on a different server.</li>
+	<li>Once you have successfully completed setup, delete carpsetup.php and carpsetupinc.php from your server.</li>
+	<li>You may also delete PHPFTP.php and PHPTelnet.php--they are not used by CaRP.
+		However, if you are a PHP programmer, you may find them useful.
+		See the <a href="http://www.geckotribe.com/php-ftp/">PHP FTP</a> and <a href="http://www.geckotribe.com/php-telnet/">PHP Telnet</a> homepages for more information.</li>
+	</ol>
+	
+	<b>If you wish to use directory-based caching, but the installation script is unable to create cache directories,</b>
+		or is unable to create files in the cache directories after creating them,
+		you will need to create them manually.
+	To do so, create three subdirectories inside the directory where "carp.php" is located
+		with the names "aggregatecache", "autocache", and "manualcache".
+	Set the access permissions for these subdirectories to allow any user to read, write and "execute" them,
+		or whatever settings are necessary on your server to enable CaRP to create files in them.
+	For more information about how to do that, <a href="http://www.geckotribe.com/help/access-permissions.php">read here</a>.
+	(Note: if the installation script successfully creates these directories,
+		it will be able to do so with more secure settings,
+		so that method is preferred.)
+</div>
+
+
+<a name="displaying" class="headline">Displaying a feed</a>
+<div class="indent">
+	When carpsetup.php has finished installing CaRP, it displays a little piece of PHP code that looks something like this
+		(there will be more code if you select the mySQL caching option):
+	
+	<div class="code">
+		&lt;?php<br />
+		require_once '/YOUR/PATH/TO/carp/carp.php';<br />
+		// Add any desired configuration settings before CarpCacheShow<br />
+		// using "CarpConf" and other functions<br /><br />
+		CarpCacheShow('http://www.geckotribe.com/press/rss/pr.rss');<br>
+		?&gt;
+	</div>
+	
+	<b class="hilite">NOTE: Do not use the exact code shown here -- use the code given to you by the installation script.</b><br /><br />
+	
+	To display a feed, paste that code into a PHP webpage in the place where you want the feed displayed
+			(if you want to display the feed in a webpage whose name doesn't end with ".php",
+			see <a href="#pagetypes">Using CaRP in PHP, HTML, ASP and other webpages</a>).
+		Then change the URL to the URL of the feed you wish to display.
+		If you don't have a feed in mind already,
+			you can search for one at <a href="http://chordata.info/">Chordata</a>.<br /><br />
+	
+	Here's what each line of the code does:
+	<ul class="widelist">
+	<li><b>&lt;?php</b> - starts a block of PHP code</li>
+	<li><b>require_once '/YOUR/PATH/TO/carp/carp.php';</b> - Loads CaRP.
+		This code does not cause anything to be displayed--it just loads CaRP and sets up the default configuration.
+		Note that '/YOUR/PATH/TO/carp/' will be different based on where CaRP is installed on your server.
+		Sometimes, this path will be different than what you see when you log in to your server,
+			so it's important to keep a copy of the path that carpsetup.php gives you.<br /><br />
+		<b>IMPORTANT:</b> The path to CaRP <i><b>must</b></i> be a local file path like what carpsetup.php gives you, <i><b>not</b></i> a URL.
+		Because of the way PHP works, CaRP cannot be loaded using a URL.
+		For example, the following <i><b>will not work.</b></i>
+		<div class="code">require_once 'http://www.your-website.com/carp/carp.php'; // THIS WON'T WORK!</div></li>
+	<li><b> // Add any desired configuration settings before CarpCacheShow</b>
+			and <b>// using "CarpConf" and other functions</b> -
+		These lines are comments to you--they don't do anything.
+		PHP ignores anything on a line appearing after // unless it is enclosed in quote marks (either "double" or 'single').
+		So in this code, for example, "$a=$b*3;" is executable PHP code, but "// this doesn't do anything" is a comment and is ignored by PHP:
+		<div class="code">$a=$b*3; // this doesn't do anything</div>
+		But in this code, "//" does not prevent anything following it from being treated as PHP code
+			because it is enclosed in the quote marks that surround the entire URL:
+		<div class="code">CarpCacheShow('http://www.geckotribe.com/press/rss/pr.rss');</div></li>
+	<li><b>CarpCacheShow('http://www.geckotribe.com/press/rss/pr.rss');</b> -
+		This line calls the CaRP function "CarpCacheShow",
+			telling CaRP to store a copy of the RSS feed at 'http://www.geckotribe.com/press/rss/pr.rss'
+			convert the feed to HTML,
+			and display it.
+		If CaRP already has a new enough copy of the feed in it's cache,
+			it uses that copy.
+		Otherwise, it retrieves the feed again and refreshes it's cache and uses the new data.</li>
+	<li><b>?&gt;</b> - ends a block of PHP code</li>
+	</ul>
+	
+	That's all it takes to display an RSS feed using CaRP,
+		but you'll want to add some configuration code to get the feed to look right for your website.
+	Before we get into configuration, it will be helpful to understand just a little bit about how RSS feeds are structured.
+</div>
+
+
+<a name="rss" class="headline">The parts of an RSS feed</a>
+<div class="indent">
+	You don't need to have any technical understanding of XML or the RSS format to use CaRP.
+	But <b class="hilite">knowing a few basic things about how RSS feeds are structured will make it easier to understand CaRP's configuration system.</b><br /><br />
+	
+	<b>Channel and Items:</b><br />
+	Let's compare an RSS feed to a newspaper.
+	At the top of the newspaper, you'll see the paper's name, the date it was published, and a few other bits of information about the paper itself.
+	An RSS feed is similar--the information that talks about the RSS feed itself is called the "channel" data.
+	A newspaper also contains a number of stories.
+	The stories in an RSS feed are called "items".
+	An RSS feed is made up of some channel data followed by any number of items.<br /><br />
+	
+	The following sections introduce the names that CaRP uses to refer to various pieces of data within the channel and items.
+	We'll discuss how you'll use those names a little further down the page.<br /><br />
+	
+	<b>Channel Data:</b><br />
+	The channel section of an RSS feed contains a number of different pieces of data.
+	Some feeds contain more channel data than others.
+	The following table lists the names that CaRP uses to refer to some of the most important pieces of channel data.
+	If you're curious, it also lists the names of the elements in the RSS feed in which the data is found.
+	
+	<table class="table">
+	<tr class="th">
+		<td>CaRP's&nbsp;name</td>
+		<td>Description</td>
+		<td>RSS&nbsp;element</td>
+	</tr><tr>
+		<td>title</td>
+		<td>The name of the RSS feed</td>
+		<td>title</td>
+	</tr><tr>
+		<td>desc</td>
+		<td>A description of or introduction to the RSS feed</td>
+		<td>description</td>
+	</tr><tr>
+		<td>url</td>
+		<td>A URL associated with the feed--usually the address of a webpage that the data in the feed is taken from</td>
+		<td>link</td>
+	</tr><tr>
+		<td>link</td>
+		<td>CaRP uses the name "link" to refer to a combination of the title and link URL formatted as an HTML link (ie. &lt;a href="RSS LINK"&gt;RSS TITLE&lt;/a&gt;).</td>
+		<td>link + title</td>
+	</tr><tr>
+		<td>date</td>
+		<td>The date the RSS feed was last updated or published (requires CaRP Koi or CaRP Evolution).</td>
+		<td>lastBuildDate, pubDate or dc:date</td>
+	</tr><tr>
+		<td>image</td>
+		<td>
+			An image associated with the RSS feed--usually a logo (requires CaRP Koi or CaRP Evolution).<br />
+			NOTE: enclosure is only used by CaRP as an image if its "type" attribute starts with "image/".
+		</td>
+		<td>
+			image,
+			media:thumbnail,
+			or enclosure
+		</td>
+	</tr><tr class="note">
+		<td colspan="3">
+			NOTE: CaRP's name "image" refers to a combination of various pieces of data from the RSS feed, including the image's URL, height, width, alternate text, etc.
+		</td>
+	</tr>
+	</table>
+	
+	As you can see, CaRP simplifies things by using a single name to refer to whichever of a variety of pieces of data a particular feed contains,
+		or even a combination of multiple pieces of data.<br /><br />
+	
+	<b>Item Data:</b><br />
+	Each item in an RSS feed can contain a variety of pieces of data.
+	Some feeds contain more pieces of item data than others--for example, many feeds do not specify a date or image for each item.
+	The following table lists CaRP's names for each piece of data, a description of the data, and the RSS elements that the data can be found in.
+
+	<table class="table">
+	<tr class="th">
+		<td>CaRP's&nbsp;name</td>
+		<td>Description</td>
+		<td>RSS&nbsp;element</td>
+	</tr><tr>
+		<td>title</td>
+		<td>The title or headline of the item</td>
+		<td>title</td>
+	</tr><tr>
+		<td>desc</td>
+		<td>The main content of the item--it may be the full story or just an introduction to the page that the item links to</td>
+		<td>description or (if using CaRP Koi or CaRP Evolution) content:encoded</td>
+	</tr><tr>
+		<td>url</td>
+		<td>
+			A URL associated with the item--usually the address of a webpage that the data in the item is taken from,
+				but sometimes a link to a webpage that they item is talking about</td>
+		<td>link</td>
+	</tr><tr>
+		<td>link</td>
+		<td>A combination of the title and link URL formatted as an HTML link (ie. &lt;a href="RSS LINK"&gt;RSS TITLE&lt;/a&gt;).</td>
+		<td>link + title</td>
+	</tr><tr>
+		<td>date</td>
+		<td>The date the item was last updated or published (requires CaRP Koi or CaRP Evolution)</td>
+		<td>pubDate or dc:date</td>
+	</tr><tr>
+		<td>author</td>
+		<td>The author of the item (requires CaRP Koi or CaRP Evolution)</td>
+		<td>author or dc:creator</td>
+	</tr><tr>
+		<td>image</td>
+		<td>
+			An image associated with the item (requires CaRP Koi or CaRP Evolution).<br />
+			NOTE: enclosure is only used by CaRP as an image if its "type" attribute starts with "image/".
+		</td>
+		<td>
+			image,
+			media:thumbnail,
+			media:item,
+			media:content,
+			or enclosure
+		</td>
+	</tr><tr class="note">
+		<td colspan="3">
+			NOTE: CaRP's name "image" refers to a combination of various pieces of data from the item, including the image's URL, height, width, alternate text, etc.
+		</td>
+	</tr><tr>
+		<td>podcast</td>
+		<td>An audio file linked to from the item (requires CaRP Koi or CaRP Evolution)</td>
+		<td>enclosure (with a type beginning with "audio/")</td>
+	</table>
+
+
+</div>
+
+
+<a name="atom" class="headline">RSS vs. Atom</a>
+<div class="indent">
+	The name "RSS" is shared by two different but similar newsfeed data formats
+		(there are a few versions of each, but essentially it's two formats).
+	CaRP can handle feeds in either of the formats (and any of the variants of either).<br /><br />
+	
+	Another newsfeed format named "Atom" is gaining popularily recently.
+	It was created to address some of the shortcomings of RSS.
+	<b class="hilite">CaRP Free and CaRP SE cannot process Atom feeds.</b>
+	To display Atom feeds, you will either need to upgrade to <a href="http://www.geckotribe.com/rss/carp/">CaRP Evolution</a>
+		or purchase <a href="http://www.geckotribe.com/rss/grouper/">Grouper Evolution</a>.
+	The section <a href="#grouper">Using CaRP with Grouper</a> below discusses how to do the latter.
+</div>
+
+
+<a name="config" class="headline">Introduction to CaRP's configuration system</a>
+<div class="indent">
+	CaRP is configured using a function named "<a href="http://carp.docs.geckotribe.com/functions/carpconf.php">CarpConf</a>".
+	You can use CarpConf to tell CaRP to make headlines bold or bigger,
+		to only show the first 150 characters of the description,
+		to only show the headline of each item,
+		and many other things.
+	Each time you call CarpConf, you tell CaRP which of it's configuration settings to change and what to change it to, like this:
+	<div class="code">CarpConf('iorder','link,desc');</div>
+	That code, for example, tells CaRP that you want to display the link (the title and URL combined in a hyperlink) and description for each item with the link first and the description second.
+	"iorder" means "item order".
+	It specifies which pieces of data from each item to display and in what order.<br /><br />
+	
+	CaRP's configuration settings use these abbreviations:
+	
+	<ul>
+	<li><b>i</b> - item</li>
+	<li><b>c</b> - channel</li>
+	<li><b>b</b> - before</li>
+	<li><b>a</b> - after</li>
+	<li><b>trunc</b> - truncate</li>
+	</ul>
+	
+	For example, you saw that the ORDER of the pieces of ITEM data is specified by the setting "iorder".
+	Similarly, the order of the pieces of channel data <i>used to be</i> specified by the setting "corder".
+	(Now, you specify the order of pieces of channel data to display <i>before</i> the list of items with the setting "cborder" ("channel before order")
+		and the order of pieces of channel data to display <i>after</i> all the items have been displayed with the setting "caorder" ("channel after order")).<br /><br />
+	
+	In the section <a href="#rss">The parts of an RSS feed</a> above,
+		there is a list of CaRP's names for the various pieces of data.
+	You can specify text and HTML code to display before and after each piece of data like this:
+	
+	<div class="code">
+		CarpConf('bilink','&lt;b&gt;');<br />
+		CarpConf('ailink','&lt;/b&gt;');
+	</div>
+	
+	That code tells CaRP to put a "&lt;b&gt;" tag before the item link ("b i link"), and a "&lt;/b&gt;" tag after the item links ("a i link"), which would make the title bold.
+	Similarly, you could use the following code to make the date display in italics with the word "Posted on" before the item date:
+
+	<div class="code">
+		CarpConf('bidate','&lt;i&gt;Posted on ');<br />
+		CarpConf('aidate','&lt;/i&gt;');
+	</div>
+
+	If you want to change the color of the item description text, you could do this:
+
+	<div class="code">
+		CarpConf('bidesc','&lt;div style="color:#036;&gt;');<br />
+		CarpConf('aidesc','&lt;/div&gt;');
+	</div>
+
+	The same pattern applies to any of the pieces of data listed in the section above.
+	There are two exceptions: there are no "bclink" and "aclink" settings (use "bctitle" and "actitle" for both channel link and channel title),
+		and there are no "bititle" and "aititle" settings (use "bilink" and "ailink" for both item link and item title).<br /><br />
+	
+	You can also tell CaRP to display things before and after each item ("bi" = "before item" and "ai" = "after item"):
+
+	<div class="code">
+		CarpConf('bi','&lt;li&gt;');<br />
+		CarpConf('ai','&lt;/li&gt;');
+	</div>
+	
+	...and once before and after the entire list of items:
+
+	<div class="code">
+		CarpConf('bitems','&lt;ul&gt;');<br />
+		CarpConf('aitems','&lt;/ul&gt;');
+	</div>
+
+	Those last two pieces of code would tell CaRP to display the items in an "unordered list", with each item being a "list item".<br /><br />
+	
+	Similarly, you can tell CaRP what to display before and after the channel sections which appear before and after the items:
+	
+	<div class="code">
+		CarpConf('bcb','&lt;font size="3"&gt;');<br />
+		CarpConf('acb','&lt;/font&gt;');<br />
+		CarpConf('bca','&lt;font size="1"&gt;');<br />
+		CarpConf('aca','&lt;/font&gt;');
+	</div>
+
+	That code would display any channel data appearing before the items (as specified by "cborder") in font size 3
+		("bcb" = "before channel before" or "BEFORE the CHANNEL data that appears BEFORE the items", and so on),
+		and any channel data appearing after the items (as specified by "caorder") in font size 1.<br /><br />
+	
+	We've covered the most important concepts to understand for configuring CaRP.
+	Below are a few links to the documentation for other useful configuration settings and other important documentation pages:
+	<ul>
+	<li><a href="http://carp.docs.geckotribe.com/conf/display/item/#maxitems">maxitems</a> - the maximum number of items to display</li>
+	<li><a href="http://carp.docs.geckotribe.com/conf/display/item/description.php">maxidesc</a> - the maximum number of characters to display from the description</li>
+	<li><a href="http://carp.docs.geckotribe.com/conf/misc.php#descriptiontags">descriptiontags</a> - which HTML tags are allowed in the desciption (all others are removed)</li>
+	<li><a href="http://carp.docs.geckotribe.com/conf/display/item/link.php">linktarget</a> - when someone clicks a link, open in the same window, a new window, a different frame, etc.</li>
+	<li><a href="http://carp.docs.geckotribe.com/conf/display/item/date.php#timeoffset">timeoffset</a> - make corrections for the timezone of the timestamps in the feed</li>
+	<li><a href="http://carp.docs.geckotribe.com/conf/xml.php#encodingout">encodingout</a> - what character set to use for output (you'll want this to be the same as your webpage)</li>
+	<li><a href="http://carp.docs.geckotribe.com/">Interactive FAQ</a> - a step-by-step guide to answers to many common questions</li>
+	<li><a href="http://carp.docs.geckotribe.com/full-index.php">Documentation Index</a> - a complete list of configuration settings and other documentation topics</li>
+	<li><a href="http://carp.docs.geckotribe.com/conf/display/">Display Formatting</a> - a visual representation of a feed with links to all of the configuration settings relevant to each part of the feed</li>
+	</ul>
+</div>
+
+
+<a name="grouper" class="headline">Using CaRP with Grouper</a>
+<div class="indent">
+	CaRP can be used to convert the RSS output by <a href="http://www.geckotribe.com/rss/grouper/">Grouper</a> to HTML and display it on a webpage.
+	There are two possible approaches: putting the code all in one file, or splitting the CaRP and Grouper code into separate files.<br /><br />
+	
+	<b>All in one file:</b><br />
+	The basic code for using CaRP and Grouper together in a single file is as follows:
+	
+	<div class="code">
+		&lt;?php<br />
+		require_once "/YOUR/PATH/TO/grouper/grouper.php";<br />
+		// add Grouper configuration code here<br />
+		GrouperSearch("search terms","name_of_grouper_cache_file",0);<br />
+		require_once "/YOUR/PATH/TO/carp/carp.php";<br />
+		// add CaRP configuration code here<br />
+		CarpShow("grouper:name_of_grouper_cache_file");<br />
+		?&gt;
+	</div>
+	
+	Put this code in the webpage where you want the data displayed.
+	A few points of note:
+	
+	<ul>
+	<li>"name_of_grouper_cache_file" can be any valid filename, and is the name of the file in which Grouper caches its output.
+		Just be sure to use a unique cache file name for each unique set of search terms and configuration settings.</li>
+	<li>If you have Grouper Evolution, you could of course use a plugin and GrouperConver instead of GrouperSearch.
+		Using Grouper to convert Atom feeds to RSS is discussed below.</li>
+	<li>Notice the third argument in the call to GrouperSearch (the "0").
+		That zero tells Grouper not to send its output to the web browser, but only to cache it.
+		Without the zero, the person loading your webpage would see a bunch of raw RSS data.</li>
+	<li>Since Grouper already has a local copy of its output cached,
+		you can avoid storing multiple copies of identical data by using the function CarpShow instead of CarpCacheShow.</li>
+	<li>You may want to add a cache file name for CaRP to CarpShow (for example, CarpShow('grouper:grouper_cache','carp_cache');).
+		This will cache a copy of CaRP's <i>output</i> for slightly better performance.</li>
+	</ul>
+
+	<b>Separate files:</b><br />
+	You can also put the CaRP and Grouper code into separate files
+		(which is useful if you're going to use the same Grouper output on multiple webpages,
+		if you want anyone to be able to subscribe to Grouper's output in a feed reader,
+		and also to improve performance slightly).
+	Note that this method will not work on all servers,
+		because some servers will not allow CaRP to access URLs on the same server.
+	If you try this and CaRP fails to access the Grouper URL, try the all-in-one-file method shown above.<br /><br />
+	
+	The basic Grouper code for this method is as follows.
+	This and any configuration code you wish to add must be the entire contents of the file
+		(ie., no &lt;html&gt;, &lt;head&gt;, &lt;body&gt; tags, etc.):
+
+	<div class="code">
+		&lt;?php<br />
+		require_once "/YOUR/PATH/TO/grouper/grouper.php";<br />
+		// add Grouper configuration code here<br />
+		GrouperSearch("search terms","name_of_grouper_cache_file");<br />
+		?&gt;
+	</div>
+	
+	The only difference between this and the Grouper code shown above is that the GrouperSearch call does <i>not</i> have the third argument ("0").
+	Because the zero is <i>not</i> there, Grouper will send its RSS output to whoever loads the file.<br /><br />
+	
+	The CaRP code for this method, which you will put into the webpage where you want the feed to appear, is as follows:
+	
+	<div class="code">
+		&lt;?php<br />
+		require_once "/YOUR/PATH/TO/carp/carp.php";<br />
+		// add CaRP configuration code here<br />
+		CarpCacheShow("http://www.your-domain.com/path/to/grouper-code.php");<br />
+		?&gt;
+	</div>
+	
+	Replace the URL "http://www.your-domain.com/path/to/grouper-code.php" with the URL of the file containing the Grouper code shown above.
+	Note that to avoid making unnecessary HTTP connections to your own server to reload the Grouper output,
+		you should use CarpCacheShow rather than CarpShow, and/or add a cache file name to the last line.
+	For example, you could do either of the following: 
+
+	<div class="code">
+		CarpShow("http://www.your-domain.com/path/to/grouper-code.php","name_of_carp_cache_file");
+	</div>
+	<div class="code">
+		CarpCacheShow("http://www.your-domain.com/path/to/grouper-code.php","name_of_carp_cache_file");
+	</div>
+
+	"name_of_carp_cache_file" can be any valid filename, and is the name of the file in which CaRP caches its output.<br /><br />
+	
+	<b>Converting Atom to RSS:</b><br />
+	To convert an Atom feed to RSS for use with CaRP,
+		you just need to make some small changes to the Grouper code shown above.
+	Here's the all-in-one code for an Atom 1.0 feed
+	(note that this code requires Grouper Evolution):
+	
+	<div class="code">
+		&lt;?php<br />
+		require_once "/YOUR/PATH/TO/grouper/grouper.php";<br />
+		GrouperLoadPlugin('xml.php');<br />
+		GrouperLoadPlugin('xml-atom-1.0.php');<br />
+		// add Grouper configuration code here<br />
+		GrouperConvert("http://example.com/feed.atom","name_of_grouper_cache_file",0);<br />
+		require_once "/YOUR/PATH/TO/carp/carp.php";<br />
+		// add CaRP configuration code here<br />
+		CarpShow("grouper:name_of_grouper_cache_file");<br />
+		?&gt;
+	</div>
+	
+	Replace "http://example.com/feed.atom" with the URL of the Atom feed.
+	Here's the Grouper section of the split-into-two-files code (this time for an Atom 0.3 feed):
+
+	<div class="code">
+		&lt;?php<br />
+		require_once "/YOUR/PATH/TO/grouper/grouper.php";<br />
+		GrouperLoadPlugin('xml.php');<br />
+		GrouperLoadPlugin('xml-atom-0.3.php');<br />
+		// add Grouper configuration code here<br />
+		GrouperConvert("http://example.com/feed.atom","name_of_grouper_cache_file");<br />
+		?&gt;
+	</div>
+
+</div>
+
+
+<a name="pagetypes" class="headline">Using CaRP in PHP, HTML, ASP and other webpages</a>
+<div class="indent">
+	Because CaRP is a PHP script, it is easiest to use in PHP webpages (webpages whose names end with ".php").
+	However, CaRP can be used in a variety of types of webpages using the following instructions:<br />
+
+	<ul>
+	<li><b>.php</b> - Paste the code given to you by the installer script into the page in the place where you want the newsfeed to appear and then edit it as desired.</li>
+	<li><b>.shtm or .shtml</b> (or .htm or .html, if you have SSI enabled for those filename extensions) -
+		See the last paragraph of <a href="http://carp.docs.geckotribe.com/tips/2005/06/displaying-feeds-in-non-php-pages.php" target="_blank">this information</a>.</li>
+	<li><b>.htm or .html</b> - You have three options:
+		<ul>
+		<li>Change the filename extension to ".php" and use the instructions shown above.</li>
+		<li><a href="http://carp.docs.geckotribe.com/tips/2005/06/displaying-feeds-in-non-php-pages.php" target="_blank">Turn on PHP processing for your HTML pages</a> and use the instructions shown above.</li>
+		<li>Use the <a href="http://carp.docs.geckotribe.com/examples/js.php" target="_blank">example code for converting RSS to JavaScript</a>.</li>
+		</ul></li>
+	<li><b>.asp</b> - Follow <a href="http://carp.docs.geckotribe.com/tips/2005/11/displaying-rss-feeds-in-asp-pages.php" target="_blank">these instructions</a>.</li>
+	<li><b>WordPress</b> - Download the free <a href="http://www.geckotribe.com/rss/carp/CaRP-WP/" target="_blank">CaRP/WP Plugin</a>.</li>
+	<li><b>Mambo or Joomla CMS</b> - Follow <a href="http://carp.docs.geckotribe.com/tips/2006/01/displaying-rss-feeds-in-mambojoomla.php" target="_blank">these instructions</a>.</li>
+	</ul>
+</div>
+
+
+<a name="garbage" class="headline">Question marks and garbage characters</a>
+<div class="indent">
+	What do you do if question marks and garbage characters are showing up in your feeds where things like apostrophies, quote marks, hyphens, etc. should be?<br /><br />
+	
+	Question marks appear when the feed contains characters that can't be represented in the encoding specified in the "encodingout" configuration setting.
+	<a href="http://carp.docs.geckotribe.com/conf/xml.php">Changing the output encoding</a> to "UTF-8" should get rid of the question marks...but may replace them with garbage characters as described next.<br /><br />
+	
+	Garbage characters appear when CaRP's output encoding does not match the encoding of your webpage.
+	Here's how to solve the problem:
+	<ol>
+	<li>First, find out what the character encoding of your page is.
+		Look for a tag like one of the following near the top of your webpage source:
+		<ul>
+		<li>&lt;META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1"&gt;</li>
+		<li>&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;</li>
+		</ul>
+		In both examples, "ISO-8859-1" is the encoding.
+		If you don't see one of those, look for the place in your web browser menus
+			(usually something like View &gt; Character Encoding) where you can select the encoding of the page.
+		Whatever is checked in that menu is probably the correct encoding.</li>
+	<li>Next, try setting "encodingout" to that encoding as described in the <a href="http://carp.docs.geckotribe.com/conf/xml.php">encodingout documentation</a>.
+		If the garbage characters have been replaced by question marks, then the feed contains data which cannot be displayed using the encoding of your webpage.
+		To display the feed properly, you will have to change the encoding of your webpage.</li>
+	<li>Finally, if you decide to change the encoding of your webpage, do the following:
+		<ol>
+		<li>First, select an encoding.
+			I recommend choosing "UTF-8" for a few reasons:
+			<ul>
+			<li>If you're using CaRP
+	SE,
+			UTF-8 is the only available option that will solve the problem.</li>
+			<li>If you're using CaRP Koi or Evolution and your server doesn't offer iconv support, UTF-8 is the only available option that will solve the problem.</li>
+			<li>PHP's XML parser can output UTF-8, which means that the data won't have to be transcoded after it is parsed, which will improve performance.</li>
+			</ul>
+			There are two exceptions to the UTF-8 recommendation:
+			<ul>
+			<li>If your web authoring tools don't support UTF-8, and you need to enter "hi-ASCII" or other non-roman characters.</li>
+			<li>If the language of your website uses multibyte characters and there's another encoding available that uses less bytes per character,
+				you might consider saving bandwidth by using the other encoding.</li>
+			</ul></li>
+		<li>Set CaRP's "encodingout" setting to that encoding.</li>
+		<li>Make sure your webpage contains a META tag as shown above and that it specifies the new encoding (or if your webpage is XHTML, an XML declaration as shown above).</li>
+		<li>Reload your webpage, and make sure that your browser has the new encoding checked in its menu.
+			Then check the page to see if any of your content has turned into garbage characters.
+			If so, you'll need to convert the data in your webpage to the new encoding.
+			Generally this won't be necessary unless you have non-roman characters in your content.
+			How to do this depends on the program you use to edit your webpage.</li>
+		</ol></li>
+	</ol>
+</div>
+
+
+<a name="xmlerrors" class="headline">XML Errors - what to do?</a>
+<div class="indent">
+	Occasionally when attempting to process a feed, CaRP may display an error message beginning with the words "XML Error".
+	There are a few possible causes for this, some of which are problems in the feed, and some of which are limitations in PHP's XML parser.
+	Here's what to do when you encounter an XML error:
+	
+	<ol>
+	<li>If you are setting CaRP's "encodingin" configuration setting, remove that setting to allow CaRP to attempt to automatically determine the proper encoding.</li>
+	<li>If that doesn't help and you are using CaRP
+	SE,
+		check the error message and see if it tells you what the character encoding of the feed is.
+		If it does, then CaRP
+	SE
+		will not be able to process that feed.
+		Either choose another feed or upgrade to CaRP Evolution.</li>
+	<li>Go to <a href="http://feedvalidator.org/">Feed Validator.org</a> and submit the URL of the feed.
+		If the feed validator tells you that the feed is invalid, then there's probably nothing CaRP can do about it.
+		But there is one thing you can try: add this line of code just before the line that says "CarpCacheShow":<br />&nbsp;<br />
+		CarpConf('fixentities',1);<br />&nbsp;<br />
+		With luck, that will enable CaRP to fix the broken part of the feed.
+		With luck, it will do so without breaking parts of the feed that weren't already broken!
+		If that doesn't work, then the only thing to do is to notify the publisher that their feed is broken
+			(and point them to the Feed Validator so they can see for themself)
+			and hope that they'll fix it.</li>
+	<li>If the Feed Validator says that the feed is valid, try adding this line of code just before the line that says "CarpCacheShow":<br />&nbsp;<br />
+		CarpConf('encodingin','ISO-8859-1');<br />&nbsp;<br />
+		That will tell CaRP that the feed is encoded as ISO-8859-1 (don't worry if that means nothing to you!)
+		By default, CaRP expects feeds to be encoded as UTF-8.
+		If the feed isn't encoded as UTF-8 and doesn't indicate it's encoding in the XML prologue (the first line of the feed source),
+			CaRP will need you to tell it what the encoding is using the "<a href="http://carp.docs.geckotribe.com/conf/xml.php">encodingin</a>" configuration setting.</li>
+	<li>If that doesn't solve the problem, then the feed is encoded using an encoding other than UTF-8 or ISO-8859-1,
+		but doesn't explicitly specify its encoding.
+		If you are using CaRP
+	SE,
+		you will not be able to use that feed.
+		Either choose another feed or upgrade to CaRP Evolution.
+		If you are already using CaRP Koi or CaRP Evolution, you will need to somehow find out what the encoding of the feed is
+			and specify it in CaRP's <a href="http://carp.docs.geckotribe.com/conf/xml.php">encodingin</a> setting.</li>
+	</ol>
+</div>
+
+
+<a name="images" class="headline">Displaying images</a>
+<div class="indent">
+	Images may appear in feeds in one of two ways: <b class="hilite">the feed's &lt;image&gt; or &lt;enclosure&gt; element</b> may point to it
+		(in which case, CaRP
+	SE
+		will not be able to display it, but CaRP Koi and CaRP Evolution will,
+		as long as it's a GIF or JPEG image--see the online documentation for details),
+		or there may be <b class="hilite">an &lt;img&gt; tag in the HTML code in the description</b> (or equivalent) element of the feed.
+	If it is in the &lt;description&gt; element, any version of CaRP can display the image
+		<b class="hilite">(but by default, none do).</b>
+	If it is in another element like &lt;content:encoded&gt;, CaRP Koi and CaRP Evolution can (but by default don't) display it.
+	To make those images show up, add this line of code just before the line that says "CarpCacheShow":<br /><br />
+	CarpConfAdd('descriptiontags','|img');<br /><br />
+	CaRP keeps a list of HTML tags that it allows in the description in its "descriptiontags" setting.
+	The default list does not contain "img" (since unexpected images would very likely disrupt the formatting of your webpage).
+	The line of code shown above adds "img" tags to the list.<br /><br />
+	
+	If it is in &lt;content:encoded&gt; rather than &lt;description&gt; and the feed contains both elements, add this line of code too (Koi and Evolution only):<br /><br />
+	
+	CarpMapField('desc','content:encoded',0,10);<br /><br />
+	
+	Similarly, <b class="hilite">if you want hyperlinks within the description to show up,</b> add this line of code to add the &lt;a&gt; and &lt;/a&gt; tags to the list of allowed HTML:<br /><br />
+	
+	CarpConfAdd('descriptiontags','|a|/a');<br /><br />
+
+	<b class="hilite">...or do images and links at once like this:</b><br /><br />
+	
+	CarpConfAdd('descriptiontags','|img|a|/a');
+</div>
+
+
+<a name="poweredby" class="headline">Turning off the "Newsfeed display by CaRP" message</a>
+<div class="indent">
+	As much as I like having that message displayed at the end of each feed,
+		I also understand that sometimes your site would look better without it.
+	If you do disable that message,
+		I only ask that you either link to the CaRP homepage from somewhere on your site
+		or purchase one of the commercial versions.<br /><br />
+	
+	To disable the message, add the following line of code somewhere before the line that says "CarpCacheShow":<br /><br />
+	
+	CarpConf('poweredby','');
+</div>
+
+<a name="hosting" class="headline">CaRP-compatible web hosting</a>
+<div class="indent">
+	If you are looking for a web host,
+		or your current host does not meet the requirements for running CaRP,
+		Gecko Tribe recommends <a href="http://www.geckotribe.com/moreinfo/cj/9007370">iPowerWeb</a>.<img src="http://www.geckotribe.com/moreinfo/cjimg/9007370" border="0">
+	We have verifed that CaRP installs easily and works properly with iPowerWeb's "Web Hosting" service.
+	(NOTE: we have <i>not</i> verified it on their "Windows Hosting" option, but it may work there too).
+	iPowerWeb is a top-notch provider offering full-featured web and email hosting with excellent prices.
+	I personally selected iPowerWeb for another business of which I am a part owner,
+		and I continue to recommend them without reservation.<br /><br />
+</div>
+
+<span class="headline">Thank you for using CaRP!</span>
+</body></html>

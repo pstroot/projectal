@@ -1,0 +1,122 @@
+<RateV4Request USERID="***SNIP***">
+<Revision>2</Revision>
+<Package ID="0">
+  <Service>EXPRESS COMMERCIAL</Service>
+  <FirstClassMailType></FirstClassMailType>
+  <ZipOrigination>55418</ZipOrigination>
+  <ZipDestination>55555</ZipDestination>
+  <Pounds>3</Pounds>
+  <Ounces>0</Ounces>
+  <Container></Container>
+  <Size>REGULAR</Size>
+  <Width>12</Width>
+  <Length>12</Length>
+  <Height>12</Height>
+  <Girth>48</Girth>
+  <Value>19.95</Value>
+  <Machinable>False</Machinable>
+  <ShipDate Option="HFP">12-Mar-2012</ShipDate>
+</Package>
+<Package ID="1">
+  <Service>PRIORITY COMMERCIAL</Service>
+  <FirstClassMailType></FirstClassMailType>
+  <ZipOrigination>55418</ZipOrigination>
+  <ZipDestination>55555</ZipDestination>
+  <Pounds>3</Pounds>
+  <Ounces>0</Ounces>
+  <Container></Container>
+  <Size>REGULAR</Size>
+  <Width>12</Width>
+  <Length>12</Length>
+  <Height>12</Height>
+  <Girth>48</Girth>
+  <Value>19.95</Value>
+  <Machinable>False</Machinable>
+  <ShipDate Option="HFP">12-Mar-2012</ShipDate>
+</Package>
+<Package ID="2">
+  <Service>PRIORITY COMMERCIAL</Service>
+  <FirstClassMailType></FirstClassMailType>
+  <ZipOrigination>55418</ZipOrigination>
+  <ZipDestination>55555</ZipDestination>
+  <Pounds>3</Pounds>
+  <Ounces>0</Ounces>
+  <Container>LG FLAT RATE BOX</Container>
+  <Size>REGULAR</Size>
+  <Width>12</Width>
+  <Length>12</Length>
+  <Height>12</Height>
+  <Girth>48</Girth>
+  <Value>19.95</Value>
+  <Machinable>False</Machinable>
+  <ShipDate Option="HFP">12-Mar-2012</ShipDate>
+</Package>
+<Package ID="3">
+  <Service>PRIORITY COMMERCIAL</Service>
+  <FirstClassMailType></FirstClassMailType>
+  <ZipOrigination>55418</ZipOrigination>
+  <ZipDestination>55555</ZipDestination>
+  <Pounds>3</Pounds>
+  <Ounces>0</Ounces>
+  <Container>MD FLAT RATE BOX</Container>
+  <Size>REGULAR</Size>
+  <Width>12</Width>
+  <Length>12</Length>
+  <Height>12</Height>
+  <Girth>48</Girth>
+  <Value>19.95</Value>
+  <Machinable>False</Machinable>
+  <ShipDate Option="HFP">12-Mar-2012</ShipDate>
+</Package>
+<Package ID="4">
+  <Service>PRIORITY COMMERCIAL</Service>
+  <FirstClassMailType></FirstClassMailType>
+  <ZipOrigination>55418</ZipOrigination>
+  <ZipDestination>55555</ZipDestination>
+  <Pounds>3</Pounds>
+  <Ounces>0</Ounces>
+  <Container>SM FLAT RATE BOX</Container>
+  <Size>REGULAR</Size>
+  <Width>12</Width>
+  <Length>12</Length>
+  <Height>12</Height>
+  <Girth>48</Girth>
+  <Value>19.95</Value>
+  <Machinable>False</Machinable>
+  <ShipDate Option="HFP">12-Mar-2012</ShipDate>
+</Package>
+<Package ID="5">
+  <Service>FIRST CLASS</Service>
+  <FirstClassMailType>PARCEL</FirstClassMailType>
+  <ZipOrigination>55418</ZipOrigination>
+  <ZipDestination>55555</ZipDestination>
+  <Pounds>3</Pounds>
+  <Ounces>0</Ounces>
+  <Container></Container>
+  <Size>REGULAR</Size>
+  <Width>12</Width>
+  <Length>12</Length>
+  <Height>12</Height>
+  <Girth>48</Girth>
+  <Value>19.95</Value>
+  <Machinable>False</Machinable>
+  <ShipDate Option="HFP">12-Mar-2012</ShipDate>
+</Package>
+<Package ID="6">
+  <Service>PARCEL</Service>
+  <FirstClassMailType></FirstClassMailType>
+  <ZipOrigination>55418</ZipOrigination>
+  <ZipDestination>55555</ZipDestination>
+  <Pounds>3</Pounds>
+  <Ounces>0</Ounces>
+  <Container></Container>
+  <Size>REGULAR</Size>
+  <Width>12</Width>
+  <Length>12</Length>
+  <Height>12</Height>
+  <Girth>48</Girth>
+  <Value>19.95</Value>
+  <Machinable>False</Machinable>
+  <ShipDate Option="HFP">12-Mar-2012</ShipDate>
+</Package>
+</RateV4Request>

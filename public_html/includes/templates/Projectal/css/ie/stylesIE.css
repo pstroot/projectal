@@ -1,0 +1,59 @@
+/* IE cannot have transparent background colors, so instead us a transparent png as the background color */
+
+#topNav li ul{
+	height:auto;
+	background-image: url(../images/subnav_bkg_middle.png);
+	background-repeat: repeat-y;	
+}
+
+#topNav li:hover .subnav ul li{ 
+	background-image:none;
+	background-image: url(../images/subnav_bkg_middle.png);
+	background-repeat: repeat-y;
+	background-position: 999px bottom;
+	
+	/* IE cannot place a glow around the hovered subnav, so instead, place a grey border on the top and bottom */
+	border-top:1px solid #d7d4b4;
+	border-bottom:1px solid #d7d4b4;
+}
+#topNav li:hover ul li:hover, #topNav li:hover .subnav ul li.active{ 
+	border-top:1px solid #666666;
+	border-bottom:1px solid #666666;	
+}
+
+
+header h1{ /* adjust for the glow in IE */
+	filter: progid:DXImageTransform.Microsoft.Glow(color=#000000, strength=5);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Glow(color=#000000, strength=5)"; /* post IE8 */
+	margin-top:-5px;
+	margin-left:-5px;
+}
+
+
+
+#categoryInfo #categoryList a{	
+	padding-top:6px;
+	height:20px;
+}
+
+#sizeInfo li{
+	display:inline;
+}
+#sizeChart{
+	display:none;
+	position:absolute;
+	margin-top:-10px;
+	font-weight:bold;
+	width:460px;
+	background-color:rgba(0,0,0,0.88);
+	background-color:#000000;
+}
+#sizeChart .row1 td{background-color:#4d4d4d;}
+#sizeChart .row2 td{}
+/* END PRODUCT PAGE */
+
+
+
+.wrapperAttribsOptions ul li{
+	float:left;
+}
